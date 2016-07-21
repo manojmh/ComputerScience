@@ -1,3 +1,13 @@
+/**
+ * Date 21/07/2016
+ * @author Manoj Hanamshet
+ *
+ * Optimal Binary Search Tree
+ *
+ * References -
+ * http://www.geeksforgeeks.org/dynamic-programming-set-24-optimal-binary-search-tree/
+ * https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/OptimalTreeSearch.java
+ */
 #include <iostream>
 #include <vector>
 using namespace std;
