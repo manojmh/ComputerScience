@@ -1,3 +1,19 @@
+/**
+ * Date 22/07/2016
+ * @author Manoj Hanamshet
+ *
+ * Given a string find longest palindromic subsequence in this string.
+ *
+ * Time complexity - O(n2)
+ * Space complexity - O(n2)
+ *
+ * Youtube link - https://youtu.be/_nCsPn7_OgI
+ *
+ * References
+ * http://www.geeksforgeeks.org/dynamic-programming-set-12-longest-palindromic-subsequence/
+ * https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/LongestPalindromicSubsequence.java
+ */
+
 #include <iostream>
 using namespace std;
 
