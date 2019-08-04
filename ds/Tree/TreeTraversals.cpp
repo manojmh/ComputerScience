@@ -30,6 +30,14 @@ void inOrderRec(Node *root) {
   if(root->right) inOrderRec(root->right);
 }
 
+void postOrderRec(Node *root) {
+  if(!root) return;
+
+  if(root->left) postOrderRec(root->left);
+  if(root->right) postOrderRec(root->right);
+  cout << root->data << " ";
+}
+
 void preOrderIter(Node* root) {
   if(!root) return;
 
@@ -67,6 +75,27 @@ void inOrderIter(Node* root) {
   }
 }
 
+void postOrderIter(Node* root)
+{
+  stack<Node *> st1, st2;
+  st1.push(root);
+
+  while(!st1.empty()) {
+    root = st1.top();
+    st1.pop();
+
+    if(root->left) st1.push(root->left);
+    if(root->right) st1.push(root->right);
+    st2.push(root);
+  }
+
+  while(!st2.empty()) {
+    root = st2.top();
+    st2.pop();
+    cout << root->data << " ";
+  }
+}
+
 void preOrder(Node *root) {
   preOrderRec(root);
   preOrderIter(root);
@@ -75,4 +104,9 @@ void preOrder(Node *root) {
 void inOrder(Node *root) {
   inOrderRec(root);
   inOrderIter(root);
+}
+
+void postOrder(Node *root) {
+  postOrderRec(root);
+  postOrderIter(root);
 }
