@@ -2,6 +2,7 @@
 Links:
 https://practice.geeksforgeeks.org/problems/inorder-traversal/1
 https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
+https://practice.geeksforgeeks.org/problems/preorder-traversal/1/
 struct Node
 {
   int data;
@@ -13,6 +14,14 @@ struct Node
   }
 }; */
 
+void preOrderRec(Node *root) {
+  if(!root) return;
+
+  cout << root->data << " ";
+  if(root->left) preOrderRec(root->left);
+  if(root->right) preOrderRec(root->right);
+}
+
 void inOrderRec(Node *root) {
   if(!root) return;
   
@@ -21,8 +30,24 @@ void inOrderRec(Node *root) {
   if(root->right) inOrderRec(root->right);
 }
 
-void inOrderIter(Node* root)
-{
+void preOrderIter(Node* root) {
+  if(!root) return;
+
+  stack<Node *> st;
+  st.push(root);
+
+  while(!st.empty()) {
+    root = st.top();
+    st.pop();
+
+    cout << root->data << " ";
+    //right first and then left
+    if(root->right) st.push(root->right); 
+    if(root->left) st.push(root->left);
+  }
+}
+
+void inOrderIter(Node* root) {
   if(!root) return;
 
   stack<Node *> st;
@@ -40,6 +65,11 @@ void inOrderIter(Node* root)
     cout << cur->data << " ";
     cur=cur->right;
   }
+}
+
+void preOrder(Node *root) {
+  preOrderRec(root);
+  preOrderIter(root);
 }
 
 void inOrder(Node *root) {
