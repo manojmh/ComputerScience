@@ -21,6 +21,13 @@ Output:
 5
 Explanation:
 Test Case 1: the max height of the staircase that can be made from  12  blocks is 4. (A staircase of height 4 means sequence of 1,2,3,4 blocks to create a valid staircase.)
+Theory:
+You know that for n steps, you need (n * (n + 1))/2 blocks. You want know, if given B blocks, how many steps you can create.
+So you have:
+(n * (n + 1))/2 = B
+(n^2 + n)/2 = B
+n^2 + n = 2B
+n^2 + n - 2B = 0
 */
 
 #include<bits/stdc++.h>
