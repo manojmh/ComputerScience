@@ -1,6 +1,6 @@
 /**
 Topological Sort
-Alien Disctionary is an application of topological sort
+Alien Dictionary is an application of topological sort
 Given a sorted dictionary of an alien language having N words and k starting alphabets of standard dictionary.
 Find the order of characters in the alien language.
 Input: 
