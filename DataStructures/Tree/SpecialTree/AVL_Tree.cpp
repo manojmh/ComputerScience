@@ -61,15 +61,18 @@ Node *insertKey(Node *root, int key) {
   root->height = 1 + max(height(root->left), height(root->right));
 
   int balance = getBalance(root);
-
+  //Left left case
   if(balance > 1 && key < root->left->data)
     return rightRotate(root);
+  //Right right case
   if(balance < -1 && key > root->right->data)
     return leftRotate(root);
+  //Left right case
   if(balance > 1 && key > root->left->data) {
     root->left = leftRotate(root->left);
     return rightRotate(root);
   }
+  //Right left case
   if(balance < -1 && key < root->right->data) {
     root->right = rightRotate(root->right);
     return leftRotate(root);
@@ -106,17 +109,21 @@ Node *deleteKey(Node *root, int key) {
   root->height = 1 + max(height(root->left), height(root->right));
 
   int balance = getBalance(root);
+  //Left left case
   if(balance > 1 && getBalance(root->left) >=0 )
     return rightRotate(root);
+  //Left right case
   if(balance > 1 && getBalance(root->left) < 0 ) {
     root->left = leftRotate(root->left);
     return rightRotate(root);
   }
+  //Right right case
   if(balance < -1 && getBalance(root->right) <= 0)
     return leftRotate(root);
+  //Right left case
   if(balance < -1 && getBalance(root->right) > 0) {
-    root->right = leftRotate(root->right);
-    return rightRotate(root);
+    root->right = rightRotate(root->right);
+    return leftRotate(root);
   }
   return root;
 }
