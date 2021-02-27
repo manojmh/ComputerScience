@@ -42,7 +42,7 @@ int Solution::solve(vector<int> &A, int B) {
   for(int i=0; i<B; i++)
       res += A[i];
 
-  int rsum = 0, lsum = res
+  int rsum = 0, lsum = res;
   int i = A.size()-1
   int idx = B-1;
 
