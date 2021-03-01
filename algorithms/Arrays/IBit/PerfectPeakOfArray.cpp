@@ -1,4 +1,4 @@
-/**
+/** FLIP KART
 Problem Description
 Given an integer array A of size N.
 You need to check that whether there exist a element which is strictly greater than all the elements on left of it and strictly smaller than all the elements on right of it.
