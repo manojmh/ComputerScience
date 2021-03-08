@@ -1,4 +1,4 @@
-/**
+/** Microsoft Jabong Zillow
 Given an integer A, return the number of trailing zeroes in A!.
 Note: Your solution should be in logarithmic time complexity.
 **Problem Constraints**
