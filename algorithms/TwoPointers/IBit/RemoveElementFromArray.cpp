@@ -1,4 +1,5 @@
 /**
+https://www.interviewbit.com/problems/remove-element-from-array/
 Remove Element
 Given an array and a value, remove all the instances of that value in the array.
 Also return the number of elements left in the array after the operation.
