@@ -14,6 +14,7 @@ Return a string denoting roman numeral version of A.
 Constraints : 1 <= A <= 3999
 For Example Input 1: A = 5 Output 1: "V"
 Input 2:A = 14 Output 2: "XIV"
+Reference for better understanding: https://projecteuler.net/about=roman_numerals
 **/
 string Solution::intToRoman(int str) {
   string hundreds[] = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
