@@ -25,17 +25,13 @@ ListNode* Solution::deleteDuplicates(ListNode* A) {
 //Editorial
 ListNode* Solution::deleteDuplicates(ListNode* A) {
   ListNode* current = A;
-  ListNode* next_next=NULL;
   if (current == NULL) 
-   return A;
+    return A;
   while (current->next != NULL) {
-   if (current->val == current->next->val) {
-     next_next = current->next->next;
-     current->next = next_next;  
-   }
-   else {
-    current = current->next; 
-   }
+    if (current->val == current->next->val)
+      current->next = current->next->next;
+    else
+      current = current->next;
   }
   return A;
 }
