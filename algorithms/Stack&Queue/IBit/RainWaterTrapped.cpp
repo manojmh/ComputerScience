@@ -16,6 +16,28 @@ Example Explanation
 Explanation 1: In this case, 6 units of rain water (blue section) are being trapped.
 Explanation 2: No water is trapped.
 **/
+class Solution {
+public:
+  int trap(vector<int>& A) {
+    if(A.size() == 0) return 0;
+    vector<int> maxLeft(A.size(), 0);
+    vector<int> maxRight(A.size(), 0);
+
+    maxLeft[0] = A[0];
+    for(int i=1; i<A.size(); i++) {
+      maxLeft[i] = max(maxLeft[i-1], A[i]);
+
+    maxRight[A.size()-1] = A[A.size()-1];
+    for(int i=A.size()-2; i>=0; i--)
+      maxRight[i] = max(maxRight[i+1], A[i]);
+
+    int ans = 0;
+    for(int i=0; i<A.size(); i++)
+      ans += min(maxLeft[i], maxRight[i]) - A[i];
+    return ans;
+  }
+};
+
 int Solution::trap(const vector<int> &A) {
   int ans = 0;
   int left = 0, right = A.size()-1;
