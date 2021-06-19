@@ -15,6 +15,7 @@ Constraints:
 1 <= s.length <= 1000
 s consists of lowercase English letters.
 
+To get the second string as in case of LCS, reverse the string
 Intution: LPS = LCS(s, reverse(s))
 **/
 class Solution {
