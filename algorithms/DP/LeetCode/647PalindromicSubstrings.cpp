@@ -46,7 +46,6 @@ public:
         }
         if(t[i][j] == true) {
             count++;
-            //cout << s.substr(i,j) << endl;
         }
       }
     }
