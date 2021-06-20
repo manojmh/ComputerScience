@@ -45,7 +45,7 @@ public:
           }
         }
         if(t[i][j] == true) {
-            count++;
+          count++;
         }
       }
     }
