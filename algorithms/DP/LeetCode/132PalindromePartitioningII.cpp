@@ -14,6 +14,8 @@ Output: 1
 Constraints:
 1 <= s.length <= 2000
 s consists of lower-case English letters only.
+
+Intution: https://www.youtube.com/watch?v=qmTtAbOTqcg
 **/
 class Solution {
 public:
