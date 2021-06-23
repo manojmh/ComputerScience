@@ -17,7 +17,6 @@ Example Output
 Output 1: 4
 Example Explanation
 Explanation 1: The longest common pallindromic subsequence is "eeee", which has a length of 4
-
 Intution: LPS(a) = LCS(a, reverse(a))
 **/
 int Solution::solve(string A) {
