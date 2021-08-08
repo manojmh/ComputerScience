@@ -1,4 +1,17 @@
 /**
+Design a hash map
+Constraints and assumptions
+For simplicity, are the keys integers only?
+Yes
+For collision resolution, can we use chaining?
+Yes
+Do we have to worry about load factors?
+No
+Can we assume inputs are valid or do we have to validate them?
+Assume they're valid
+Can we assume this fits memory?
+Yes
+
 Performance of Chaining: 
 Performance of hashing can be evaluated under the assumption that each key is equally likely to be hashed to any slot of table (simple uniform hashing).  
 m = Number of slots in hash table
