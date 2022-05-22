@@ -8,6 +8,17 @@ Example 2:
 Input: N=3
 Output: ((())), (()()), (())(), ()(()), ()()()
 */
+struct ParaString {
+  string str;
+  int open = 0;
+  int close = 0;
+  ParaString(string str, int open, int close) {
+    this->str = str;
+    this->open = open;
+    this->close = close;
+  }
+};
+
 vector<string> BalancedParanthesis(int num) {
   if(num < 1) return vector<string>();
   vector<string> res;
